@@ -1,0 +1,76 @@
+\documentclass[a4paper,10pt]{article}
+
+\usepackage[utf8]{inputenc}
+\usepackage[T2A]{fontenc}
+\usepackage[russian]{babel}
+
+\begin{document}
+    Шимигонов Степан Романович M3232
+    \newline
+
+    Задание 1
+    \newline
+
+    Пусть $A = \{x \in E$ \textbar $"31415" \subset (x)_{10}\}$
+    
+
+    Пусть $A_n$ -- множество чисел с $"31415"$ с позиции n.
+    
+    
+    $A_0 = \{0.31415\}$
+
+
+    $A_1 = \{0.031415, 0.131415, \ldots, 0.931415\}$, и так далее
+
+    $\left| A_0\right| = \mu ([0.31415, 0.31416)) = 10^{-5}$
+
+
+    $\left| A_1\right| = \mu (\cup_{i=0}^{9}[0.i31415, 0.i31416)) = 10^{-6} * 10$
+
+
+    $\ldots$
+
+    $\left| A_5\right| = \mu (\cup_{i=00000}^{999999}[0.i31415, 0.i31416)) = 10^{-10} \cdot (10^5 - 1)$ -- появился один пропуск, тк есть повтор 0.3141531415
+    Дальше таких пропусков будет больше => $\left| A_n\right| \to 0$ при $n \to \infty$
+
+    Как и в примере с мн-ом Кантора: $\forall \epsilon > 0: \exists n: \lambda(A_n) < \epsilon$ => по С-св-ву Лузина $f(x)$ измерима по Лебегу
+    \newline
+
+    Задание 2
+
+
+    Разделим мн-во значений $\sin(x)$ на $E$ -- $[-1; 1]$ на $n$ частей, определеим $f_n(x)$
+
+
+    Рассмотрим участки монотонности $\sin(x)$ на $E$:
+
+    \begin{enumerate}
+        \item Участок $[0, \frac{ \pi}{ 2} ] \cup [\frac{3 \cdot \pi  }{2}, 5 ]$ покроет $[\arcsin(\frac{2 \cdot i}{n} - 1), \arcsin(\frac{2 \cdot i + 2}{n} - 1))$
+        \item Участок $[\frac{ \pi}{ 2}, \frac{3 \cdot \pi  }{2}]$ покроет $[\arcsin(\frac{2 \cdot i + 2}{n} - 1), \arcsin(\frac{2 \cdot i}{n} - 1))$
+    \end{enumerate}
+
+    Итого - $f(x) = \frac{2 \cdot i}{n} - 1$ будет требуемой последоветльностью простых функций, где $i - номер отрезка$
+    \newline
+
+    Задание 3
+    \newline
+    
+    $\lim_{n \to \infty}{\int_{[0, 5]}{f_n d\lambda}} = $ по Th. Леви $\int_{[0, 5]}{f d\lambda} = \int_{[0, 5]}{f dx} = \int_{[0, 5]}{\sin(x) dx} = 1 - \cos(5)$
+    \newline
+    
+    Задание 4
+    \newline
+    
+    $F(x)$ - не убывает, а $\lceil x \rceil x$ огр слева => по опр задает меру Л-С
+    \newline
+    
+    Задание 5
+    \newline
+
+    $\int_{E}{fd\mu} = \int_{[0, 2]}{fd\mu_f} + \int_{[2, 3]}{fd\mu_f} + \int_{[3, 5]}{fd\mu_f} \approx -7.9211\dots $
+    \newline
+
+    Численный метод - в папке
+    \newline
+
+\end{document}
